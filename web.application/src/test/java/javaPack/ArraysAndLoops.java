@@ -18,10 +18,9 @@ public class ArraysAndLoops {
 		for (int i = 0; i < nums.length; i++) {
 			System.out.println(nums[i] * 2);
 		}
-		
-		
-		// Methods, Exception, Overloading and inheritance, Collection basics, read excel
-		
+
+		// Overloading and inheritance, Collection basics, read
+		// excel
 
 	}
 

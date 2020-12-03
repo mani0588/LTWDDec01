@@ -34,9 +34,6 @@ public class JavaBasics {
 		System.out.println(str);
 		System.out.println(bool);
 		
-		
-		// variables, arrays and loops
-
 	}
 
 }
