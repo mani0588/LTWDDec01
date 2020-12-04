@@ -1,6 +1,6 @@
 package javaPack;
 
-public class MethodsAndOverloadingAndInheritance {
+public class MethodsAndOverloadingAndInheritance extends SuperClass {
 
 	// overloading - will have same method name more than one time
 	// with different parameter type or
@@ -38,6 +38,19 @@ public class MethodsAndOverloadingAndInheritance {
 
 		int diff = res1 - res2;
 		System.out.println(diff);
+
+		obj.multiplication(2, 5);
+
+//		PersonalLoan pl = new PersonalLoan();
+//		pl.checkEligility();
+//		pl.calculateEMI();
+//		pl.getOsAmount();
+//		
+//		
+//		HousingLoan hl = new HousingLoan();
+//		hl.checkEligility();
+//		hl.calculateEMI();
+//		hl.getOsAmount();
 
 		System.out.println(obj.sum(2.2f, 3.3f));
 //		or
