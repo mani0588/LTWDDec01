@@ -4,10 +4,7 @@ public class StringFunctions {
 
 	public static void main(String[] args) {
 
-		int[] x = { 10, 12 };
-
 		String name = " Selenium webdriver ";
-
 		System.out.println(name.length());
 
 		String[] words = name.split(" ");
@@ -37,8 +34,11 @@ public class StringFunctions {
 		String address = "#10\\d2, [A-Za-z] North street,Chennai - 232323";
 		System.out.println(address.replace("North", ""));
 
-		System.out.println(address.replace("[A-Za-z]", ""));
-		System.out.println(address.replaceAll("[A-Za-z]", ""));
+		System.out.println(address.replace("[A-Za-z]", "")); // exact string matching
+		System.out.println(address.replaceAll("[A-Za-z]", "")); // regex matching
+		
+		
+		// collection basics, excel
 
 	}
 
