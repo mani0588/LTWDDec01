@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -39,14 +40,15 @@ public class SeleniumBasics {
 		driver.navigate().refresh();
 
 		// locating single element
-		driver.findElement(By.name("email_to[]")).click();
+		WebElement chk1 = driver.findElement(By.name("email_to[]"));
+		chk1.click();
 
 		// boolean methods
-		boolean isSelected = driver.findElement(By.name("email_to[]")).isSelected();
+		boolean isSelected = chk1.isSelected();
 		System.out.println(isSelected);
-		boolean isDisp = driver.findElement(By.name("email_to[]")).isDisplayed();
+		boolean isDisp = chk1.isDisplayed();
 		System.out.println(isDisp);
-		boolean isEnabled = driver.findElement(By.name("email_to[]")).isEnabled();
+		boolean isEnabled = chk1.isEnabled();
 		System.out.println(isEnabled);
 
 		// close browser
