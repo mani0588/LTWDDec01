@@ -26,6 +26,16 @@ public class HandlingGroupOfElements extends DriverUtil {
 			allChkboxs.get(i).click();
 		}
 
+		// print text of all links
+		//By.xpath("//a[@href]")
+		
+		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+		System.out.println("Number of links - " + allLinks.size());
+
+		for (int i = 0; i < allLinks.size(); i++) {
+			System.out.println(allLinks.get(i).getText());
+		}
+
 	}
 
 }
