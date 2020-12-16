@@ -13,7 +13,7 @@ public class HandlingDiffElements extends DriverUtil {
 
 		getDriver("chrome");
 
-		/// links
+		// links
 		// driver.findElement(By.linkText("Basic Contact Form")).click();
 		driver.findElement(By.partialLinkText("Basic Contact ")).click();
 
