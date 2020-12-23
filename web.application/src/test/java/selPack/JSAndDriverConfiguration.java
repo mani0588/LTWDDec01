@@ -9,12 +9,11 @@ public class JSAndDriverConfiguration extends DriverUtil {
 
 		// Driver config
 		getDriver("chrome");
-		
+
 		// JS
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		js.executeScript("arguments[0].setAttribute('maxlength','8');", driver.findElement(By.id("visver_code")));
-		
+
 	}
 
 }
-

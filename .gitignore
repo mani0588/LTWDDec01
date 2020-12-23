@@ -5,3 +5,4 @@ target/
 .project
 .metadata/
 .recommenders/
+test-output/
