@@ -13,7 +13,7 @@ public class DriverUtil {
 
 	static WebDriver driver;
 
-	public static void getDriver(String browser) {
+	public static WebDriver getDriver(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 
@@ -30,6 +30,8 @@ public class DriverUtil {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		// driver.manage().window().maximize();
 		driver.get("https://www.mycontactform.com/samples.php");
+
+		return driver;
 	}
 
 }
