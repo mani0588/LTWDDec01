@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Mycontact Form - Automation" verbose="1">
+	<test name="Regression Test with chrome">
+		<classes>
+			<class name="testNGPack.CommonAnnotations" />
+			<class name="testNGPack.Scenario1" />
+			<class name="testNGPack.Scenario2" />
+		</classes>
+	</test>
+</suite>
