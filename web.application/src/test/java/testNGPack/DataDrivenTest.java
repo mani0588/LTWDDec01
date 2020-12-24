@@ -3,6 +3,7 @@ package testNGPack;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -22,6 +23,9 @@ public class DataDrivenTest extends DriverUtil {
 	public void verifyLogin(String un, String pwd) {
 		System.out.println("checking login is working");
 		driver.findElement(By.name("user")).sendKeys(un + Keys.TAB + pwd + Keys.ENTER);
+		// Assert
+		boolean isLoginBtnPresent = driver.findElement(By.name("btnSubmit")).isDisplayed();
+		Assert.assertFalse(isLoginBtnPresent);
 	}
 
 	@BeforeMethod
@@ -39,6 +43,7 @@ public class DataDrivenTest extends DriverUtil {
 	@DataProvider
 	public Object[][] dp() {
 		return new Object[][] { new Object[] { "adminusers", "password" }, new Object[] { "enduser", "endpass" },
-				new Object[] { "agentuser", "agtpass" } };
+				new Object[] { "agentuser", "agtpass" } ,};
+				// excel
 	}
 }
