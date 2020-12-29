@@ -21,11 +21,13 @@ public class ReadExcel {
 		String val = sh1.getRow(0).getCell(0).getStringCellValue();
 		System.out.println(val);
 
+		Object[][] data = new Object[5][2];
+
 		// print all values from excel
 		for (int row = 0; row < 5; row++) {
 			for (int clm = 0; clm < 2; clm++) {
-				String val1 = sh1.getRow(row).getCell(clm).getStringCellValue();
-				System.out.println(val1);
+				data[row][clm] = sh1.getRow(row).getCell(clm).getStringCellValue();
+				System.out.println(data[row][clm]);
 			}
 		}
 

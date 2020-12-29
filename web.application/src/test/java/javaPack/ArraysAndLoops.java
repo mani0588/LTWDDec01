@@ -19,6 +19,10 @@ public class ArraysAndLoops {
 			System.out.println(nums[i] * 2);
 		}
 
+		int[] nums2 = new int[2];
+		nums2[0] = 10;
+		nums2[1] = 20;
+
 		// Overloading and inheritance, Collection basics, read
 		// excel
 

@@ -1,5 +1,11 @@
 package testNGPack;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -41,9 +47,17 @@ public class DataDrivenTest extends DriverUtil {
 	}
 
 	@DataProvider
-	public Object[][] dp() {
-		return new Object[][] { new Object[] { "adminusers", "password" }, new Object[] { "enduser", "endpass" },
-				new Object[] { "agentuser", "agtpass" } ,};
-				// excel
+	public Object[][] dp() throws InvalidFormatException, IOException {
+		XSSFWorkbook wb = new XSSFWorkbook(new File("./src/test/resources/TestData.xlsx"));
+		XSSFSheet sh1 = wb.getSheet("Sheet1");
+
+		Object[][] data = new Object[5][2];
+		for (int row = 0; row < 5; row++) {
+			for (int clm = 0; clm < 2; clm++) {
+				data[row][clm] = sh1.getRow(row).getCell(clm).getStringCellValue();
+			}
+		}
+
+		return data;
 	}
 }
