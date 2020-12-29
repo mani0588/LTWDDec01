@@ -29,6 +29,7 @@ public class DataDrivenTest extends DriverUtil {
 	public void verifyLogin(String un, String pwd) {
 		System.out.println("checking login is working");
 		driver.findElement(By.name("user")).sendKeys(un + Keys.TAB + pwd + Keys.ENTER);
+		
 		// Assert
 		boolean isLoginBtnPresent = driver.findElement(By.name("btnSubmit")).isDisplayed();
 		Assert.assertFalse(isLoginBtnPresent);
@@ -57,7 +58,6 @@ public class DataDrivenTest extends DriverUtil {
 				data[row][clm] = sh1.getRow(row).getCell(clm).getStringCellValue();
 			}
 		}
-
 		return data;
 	}
 }
