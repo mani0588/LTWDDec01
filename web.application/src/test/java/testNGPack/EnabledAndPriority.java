@@ -38,6 +38,6 @@ public class EnabledAndPriority {
 	public void afterMethod() {
 	}
 	
-	// POM, Grid, Proxy
+	// Grid, Proxy, Explicit, locators
 
 }
