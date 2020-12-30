@@ -46,7 +46,9 @@ public class XpathAndCss extends DriverUtil {
 		
 		
 		// Locate last 3 options in the dropdown
+			//option[position() > (count(//select/option) -3)]
 		// case insensitive matching in xpath
+			
 		// ignore leading and trailing white spaces in xpath
 
 		List<WebElement> dds2 = driver.findElements(By.tagName("select"));

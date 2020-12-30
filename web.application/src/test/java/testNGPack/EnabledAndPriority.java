@@ -1,6 +1,8 @@
 package testNGPack;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class EnabledAndPriority {
@@ -28,12 +30,14 @@ public class EnabledAndPriority {
 		System.out.println("uninstallApp");
 	}
 
-//	@BeforeMethod
-//	public void beforeMethod() {
-//	}
-//
-//	@AfterMethod
-//	public void afterMethod() {
-//	}
+	@BeforeMethod
+	public void beforeMethod() {
+	}
+
+	@AfterMethod
+	public void afterMethod() {
+	}
+	
+	// POM, Grid, Proxy
 
 }
