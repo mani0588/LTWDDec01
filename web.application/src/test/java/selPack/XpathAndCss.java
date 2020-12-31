@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class XpathAndCss extends DriverUtil {
@@ -44,13 +45,30 @@ public class XpathAndCss extends DriverUtil {
 //		
 //		starts-with() - //select/option[starts-with(@value,'Alge')]
 		
+// 		Locate last 3 options in the dropdown
+		//option[position() > last()-3]
+//		case insensitive matching in xpath
+		//label[translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')='subject: ']
+//		ignore leading and trailing white spaces in xpath
+			//label[normalize-space(text())='Subject:']
 		
-		// Locate last 3 options in the dropdown
-			//option[position() > (count(//select/option) -3)]
-		// case insensitive matching in xpath
-			
-		// ignore leading and trailing white spaces in xpath
-
+		
+//		@keyword(key="open browser")
+//		public void openBrow(String browser)
+//		{
+//			 if(browser.equals("chrome"))
+//			 {
+//				 driver = new ChromeDriver();
+//				 System.out.println("Chrome browser is being opened");
+//			 }
+//		}
+//		
+//		//BBD - Behavioaral driven development
+//		open browser chrome
+//		select value from dropdown xpath chennai
+		
+		
+		
 		List<WebElement> dds2 = driver.findElements(By.tagName("select"));
 		for (int i = 0; i < dds2.size(); i++) {
 			Select dd = new Select(dds2.get(i));
